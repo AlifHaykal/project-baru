@@ -1,4 +1,4 @@
-<h1>Rumah Makan Istimewa</h1>
+<h1>Toko Elektronik Bermartabat</h1>
 <link href="D:\ORBIT\Tugas HTML\Praktikum 6\tes1.css" rel="stylesheet">
 <meta charset="UTF-8">
 <form action="#" class="container">
@@ -7,14 +7,14 @@
     <br><br>
     <input type="text" name="nama" id="nama" />
     <br><br>
-    <label for="nomeja">Nomor Meja</label>
+    <label for="nopesanan">Nomor Pesanan</label>
     <br><br>
-    <input type="text" name="nomeja" id="nomeja" />
+    <input type="text" name="nopesanan" id="nopesanan" />
     <br><br>
     <label for="jeniskelamin">Jenis Kelamin</label>
     <br><br>
-    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki"/> Laki-laki
-    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="perepmuan"/> Perempuan
+    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="Laki-laki"/> Laki-laki
+    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="Perempuan"/> Perempuan
     <br><br>
     <label for="Lampu">Jenis Lampu</label>
     <br><br>
@@ -34,9 +34,9 @@
 <script>
     function tampilData() {
         var nama = document.getElementById("nama").value;
-        var nomeja = document.getElementById("nomeja").value;
+        var nopesanan = document.getElementById("nopesanan").value;
         var jeniskelamin = document.querySelector("input[name=jeniskelamin]:checked").value;
-        var Lampu = document.getElementsByName("Jenis Lampu");
+        var Lampu = document.getElementsByName("Lampu");
         var JenisLampu = ''
 
         for(var Lampu2 of Lampu) {
@@ -48,12 +48,12 @@
         JenisLampu = JenisLampu.substring(1)
 
         alert(
-            "   Terimakasih telah memesan Lampu di rumah makan kami   " +
+            "   Terimakasih telah memesan Lampu di Toko Elektronik Kami   " +
             "\nSilahkan periksa kembali apakah data pesanan anda sudah benar" +
             "\n\nNama : " +
             nama +
-            "\nNomor meja : " +
-            nomeja +
+            "\nNomor Pesanan : " +
+            nopesanan +
             "\nJenis Kelamin : " +
             jeniskelamin +
             "\nJenis Lampu : " +

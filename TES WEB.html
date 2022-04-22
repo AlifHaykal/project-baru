@@ -1,0 +1,64 @@
+<h1>Rumah Makan Istimewa</h1>
+<link href="D:\ORBIT\Tugas HTML\Praktikum 6\tes1.css" rel="stylesheet">
+<meta charset="UTF-8">
+<form action="#" class="container">
+    <br>
+    <label for="nama">Nama &emsp;</label>
+    <br><br>
+    <input type="text" name="nama" id="nama" />
+    <br><br>
+    <label for="nomeja">Nomor Meja</label>
+    <br><br>
+    <input type="text" name="nomeja" id="nomeja" />
+    <br><br>
+    <label for="jeniskelamin">Jenis Kelamin</label>
+    <br><br>
+    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki"/> Laki-laki
+    <input type="radio" name="jeniskelamin" id="jeniskelamin" value="perepmuan"/> Perempuan
+    <br><br>
+    <label for="Lampu">Jenis Lampu</label>
+    <br><br>
+    <input type="checkbox" name="Lampu" id="Lampu" value="Halogen" /> Halogen
+    <input type="checkbox" name="Lampu" id="Lampu" value="LED" /> LED
+    <input type="checkbox" name="Lampu" id="Lampu" value="Pijar" /> Pijar
+    <input type="checkbox" name="Lampu" id="Lampu" value="TL" /> TL
+    <br><br>
+    <img src="D:\ORBIT\Tugas HTML\Praktikum 6\Lampu Halogen.jpg" alt="Halogen" height="80" width="80">
+    <img src="D:\ORBIT\Tugas HTML\Praktikum 6\Lampu LED.jpg" alt="LED" height="80" width="80">
+    <img src="D:\ORBIT\Tugas HTML\Praktikum 6\Lampu Pijar.jpg" alt="Pijar" height="80" width="80">
+    <img src="D:\ORBIT\Tugas HTML\Praktikum 6\Lampu TL.jpg" alt="TL" height="80" width="80">
+    <input type="button" value="Kirim" onclick="tampilData()" />
+    <br><br><br>
+</form>
+
+<script>
+    function tampilData() {
+        var nama = document.getElementById("nama").value;
+        var nomeja = document.getElementById("nomeja").value;
+        var jeniskelamin = document.querySelector("input[name=jeniskelamin]:checked").value;
+        var Lampu = document.getElementsByName("Jenis Lampu");
+        var JenisLampu = ''
+
+        for(var Lampu2 of Lampu) {
+            if(Lampu2.checked) {
+                JenisLampu += ', '+Lampu2.value
+            }
+        }
+
+        JenisLampu = JenisLampu.substring(1)
+
+        alert(
+            "   Terimakasih telah memesan Lampu di rumah makan kami   " +
+            "\nSilahkan periksa kembali apakah data pesanan anda sudah benar" +
+            "\n\nNama : " +
+            nama +
+            "\nNomor meja : " +
+            nomeja +
+            "\nJenis Kelamin : " +
+            jeniskelamin +
+            "\nJenis Lampu : " +
+            JenisLampu +
+            "\n\nMohon ditunggu pesanannya"
+        );
+    }
+</script>
